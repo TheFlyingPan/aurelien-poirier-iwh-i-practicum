@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    a(href="/update-cobj") Add to this table
+    h1 Plants
+    table
+      thead
+        tr
+          th Name
+          th Species
+          th Bio
+      tbody
+        if data
+          each record in data
+            tr
+              td #{record.properties.name}
+              td #{record.properties.species}
+              td #{record.properties.bio}
